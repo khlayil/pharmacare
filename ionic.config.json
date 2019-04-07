@@ -1,0 +1,7 @@
+{
+  "name": "pharmacare",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}

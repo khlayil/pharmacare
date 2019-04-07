@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-navbar navbarColor>
+    <ion-title >Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
+
+  <ion-list *ngFor="let m of medocs">
+
+    <ion-item>
+      <ion-thumbnail item-start>
+        <img src="assets/imgs/max.jpg">
+      </ion-thumbnail>
+      <h2>{{m.name}}</h2>
+      <p  [ngClass]="{'stock_ref2': m.stock === 'Out Of Stock','stock_ref1': m.stock === 'In Stock'}">{{m.stock}}</p>
+      <button ion-button clear item-end (click)="goDetails(m)">View</button>
+    </ion-item>
+
+  </ion-list>
+</ion-content>
